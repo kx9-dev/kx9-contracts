@@ -1,0 +1,54 @@
+{
+  "name": "@kx9-dev/contracts",
+  "version": "0.1.0",
+  "description": "Solidity Shield vaults and factory with operator limits, supervised approvals and local-chain tests.",
+  "type": "module",
+  "license": "MIT",
+  "author": "KX-9 contributors <dev@kx9.tech>",
+  "homepage": "https://github.com/kx9-dev/kx9-docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kx9-dev/kx9-contracts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kx9-dev/kx9-contracts/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "kx9",
+    "solidity",
+    "ethereum",
+    "smart-contracts",
+    "defi"
+  ],
+  "files": [
+    "src",
+    "out",
+    "compile.mjs",
+    "scripts",
+    "test",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "compile": "node compile.mjs",
+    "test": "node test/flow.test.mjs",
+    "deploy:chain": "node scripts/deploy.mjs"
+  },
+  "devDependencies": {
+    "ethers": "6.17.0",
+    "solc": "0.8.24",
+    "@foundry-rs/anvil": "1.7.1"
+  },
+  "overrides": {
+    "solc": {
+      "tmp": "0.2.7"
+    }
+  }
+}
